@@ -1,0 +1,7 @@
+	<table >
+		<tr data-ng-repeat="x in currentCongress.objects|filter:search:strict">
+
+			<td><a href="#/congress/{{x.id}}">{{x.person.name}}</a></td>
+
+		</tr>
+	</table>

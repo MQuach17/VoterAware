@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-ng-app="VAapp" >
+<head>
+	<title>Vote Aware</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body data-ng-controller="VAcontroller">
+	<input data-ng-model="search.person.name"></input>
+	<table >
+		<tr data-ng-repeat="x in currentCongress|filter:search:strict">
+
+			<td><a href="#/congress/{{x.id}}">{{x.person.name}}</a></td>
+
+		</tr>
+	</table>
+
+
+</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="VAapp.js"></script>
+	<script type="text/javascript" src="VAservices.js"></script>
+	<script type="text/javascript" src="VAcontrollers.js"></script>
+</html>
