@@ -1,7 +1,9 @@
+	<input data-ng-model="search.person.name"></input>
 	<table >
-		<tr data-ng-repeat="x in currentCongress.objects|filter:search:strict">
+		<tr data-ng-repeat="x in currentCongress|filter:search:strict">
 
-			<td><a href="#/congress/{{x.id}}">{{x.person.name}}</a></td>
+			<td><a href="#/congress/{{x.person.id}}">{{x.person.name}}</a></td>
+			<!-- <td><a href="https://www.govtrack.us/api/v2/person/{{x.person.id}}">{{x.person.name}}</a></td> -->
 
 		</tr>
 	</table>
