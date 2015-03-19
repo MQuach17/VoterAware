@@ -1,0 +1,72 @@
+table, tr, td{
+	border-style: solid;
+	border-width: 1px;
+}
+#content{
+	padding: 3em 3em 3em 3em;
+	background-color: white;
+}
+.main{
+	padding:0em 13em 0em 13em;
+
+	/*width: 75%;*/
+	background-color: #A88AA6;
+}
+nav{
+}
+body, html{
+	background-color: #A88AA6;
+}
+#logo{
+	margin: auto auto;
+	display:block;
+		/*padding:10em 13em 0em 13em;*/
+
+}
+h2{
+	text-align: center;
+	margin: 0em;
+}
+.header{
+		padding:0em 13em 0em 13em;
+		background-color: #A88AA6;
+}
+.header div{
+	background-color: white;
+}
+hr{
+	border-top:3px solid #9696AE!important;
+	margin: auto auto !important;
+	width: 75%;
+	position: center;
+}
+li a{
+	color: black;
+	font-size: 1.2em;
+	font-family: serif;
+}
+.well{
+	background-color: #FFFDF0!important;
+	background-image: none!important;
+	border:none!important;
+	border-radius: 0px!important;
+}
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }

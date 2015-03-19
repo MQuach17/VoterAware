@@ -11,8 +11,20 @@ app.config(['$routeProvider',
 				templateUrl: "partials/congress.html", 
 				controller: "detailController"
 			}).
+		when("/splash",{
+				templateUrl: "partials/splash.html", 
+				controller: "detailController"
+			}).
+		when("/about",{
+				templateUrl: "partials/about.html", 
+				controller: "detailController"
+			}).
+		when("/contact",{
+				templateUrl: "partials/contact.html", 
+				controller: "detailController"
+			}).
 		otherwise({
-			templateUrl: 'partials/allCongress.html'
+			templateUrl: 'partials/splash.html'
 			// controller:"VAcontroller"
 	});
 }]);
