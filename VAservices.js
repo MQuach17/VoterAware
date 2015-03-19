@@ -13,8 +13,23 @@ angular.module('VAapp.services', []).
     govTrackAPI.getCongressDetails = function(id){
       return $http({
         method: 'GET', 
-        url: 'https://www.govtrack.us/api/v2/person/'+ id
+        url: 'https://www.govtrack.us/api/v2/person/'+ id+'&format=json'
       });      
     }
+
+    govTrackAPI.getCongressmenVotes = function(id){
+      return $http({
+        method: 'GET', 
+        url: 'https://www.govtrack.us/api/v2/vote_voter?person='+ id+'&format=json'
+      });
+    }
+
+    govTrackAPI.getBillName = function(id){
+      return $http({
+        method: 'GET', 
+        url: 'https://www.govtrack.us/api/v2/bill/'+ id+'&format=json'
+      });
+    }
+
     return govTrackAPI;
   });

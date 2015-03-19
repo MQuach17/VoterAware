@@ -1,3 +1,12 @@
-{{congressDetails}}
+<!-- {{congressDetails}} -->
 <img src="https://www.govtrack.us/data/photos/{{congressDetails.id}}-100px.jpeg">
+<!-- {{billNames.title}} -->
+<table>
+	<tr data-ng-repeat="x in votedBills">
+		<td >
+			Bill ID: {{x.option.id}} {{getBillNames(x.option.id)}} {{billNames.title}}
+		</td>
+		<td></td>
+	</tr>
+</table>
 

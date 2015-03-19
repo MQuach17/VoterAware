@@ -5,24 +5,24 @@
 	    <a href="" data-ng-click="adv=1" data-ng-show="!adv">Advanced Search</a>
 	    <div data-ng-show="adv">	  
 	     </br>  
-	      State: <select data-ng-model="state.state">
+	      State: <select data-ng-model="search.state">
 	      	<option data-ng-repeat="x in states">{{x}}</option>
 	      </select>
 	      </br>
 
 	      Party: 
-	      	<input type="radio" value="Democrat" data-ng-model="party.party" name="party"> Democrat</input>
+	      	<input type="radio" value="Democrat" data-ng-model="search.party" name="party"> Democrat</input>
 
 	      <input type="radio" value="Republican" name="party"> Republican</input>
 	      </br>
-
+	      <button data-ng-click="clear()">Clear</button>
 	      </br>
 	      </br>
 	  	  <a href="" data-ng-click="adv=0">Less</a>
 		</div>
 	</div>
 	<table class="table">
-		<tr data-ng-repeat="x in currentCongress|filter:search:strict|filter:state:strict|filter:party:strict">
+		<tr data-ng-repeat="x in currentCongress|filter:search:strict">
 			<td><img src="https://www.govtrack.us/data/photos/{{x.person.id}}-100px.jpeg"></td>
 			<td><a href="#/congress/{{x.person.id}}">{{x.person.name}}</a></td>
 			<!-- <td>{{x.state}}</td> -->
