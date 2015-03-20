@@ -2,11 +2,26 @@
 <img src="https://www.govtrack.us/data/photos/{{congressDetails.id}}-100px.jpeg">
 <!-- {{billNames.title}} -->
 <table>
-	<tr data-ng-repeat="x in votedBills">
+	<tr><th>Bill ID</th><th>Bill Name</th><th>Vote</th></tr>
+	<tr data-ng-repeat="x in votedBills" class="stripped">
 		<td >
-			Bill ID: {{x.option.id}} {{getBillNames(x.option.id)}} {{billNames.title}}
+			{{x.option.id}}
 		</td>
-		<td></td>
+		<td>
+			{{billNames[$index]}}
+		</td>
+		<td>
+			{{x.option.value}}
+		</td>
+<!-- 		<td>
+			{{x.vote.category_label}}
+		</td> -->
+
 	</tr>
 </table>
 
+<!-- <table>
+	<tr data-ng-repeat="x in billNames">
+		<td>{{x}}</td>
+	</tr>
+</table> -->

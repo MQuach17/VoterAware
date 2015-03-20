@@ -2,6 +2,14 @@ table, tr, td{
 	border-style: solid;
 	border-width: 1px;
 }
+.stripped:nth-child(odd){
+	background-color: gray;
+}
+th{
+	font-style: 1.5em;
+	background-color: none!important;
+	text-align: center;
+}
 #content{
 	padding: 3em 3em 3em 3em;
 	background-color: white;
@@ -33,6 +41,10 @@ h2{
 }
 .header div{
 	background-color: white;
+}
+footer{
+			padding:0em 13em 0em 13em;
+
 }
 hr{
 	border-top:3px solid #9696AE!important;

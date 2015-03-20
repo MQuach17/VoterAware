@@ -15,44 +15,23 @@ angular.module('VAapp.controllers', []).
 
   controller('detailController',function($scope,$routeParams,govTrackAPIservice){
     $scope.id = $routeParams.id;
-    // $scope.races = [];
     $scope.congressDetails = {};
 
     govTrackAPIservice.getCongressDetails($scope.id).success(function (response) {
         $scope.congressDetails = response; 
     });
+    $scope.billNames=[];
 
     $scope.votedBills = {};
     govTrackAPIservice.getCongressmenVotes($scope.id).success(function(response){
         $scope.votedBills=response.objects;
+        angular.forEach($scope.votedBills,function(vb){
+          govTrackAPIservice.getBillName(vb.option.id).success(function(response){
+            $scope.billNames.push(response.title);
+          });
+        });
 
     });
 
-    $scope.billNames={};
-    // govTrackAPIservice.getBillName(170350).success(function(response){
-    //   $scope.billNames=response;
-    // });
-
-
-    // $scope.getBillNames=function(id){
-    //  govTrackAPIservice.getBillName(id).success(function(response){
-    //     $scope.billNames=response;
-    //   });
-    //   return $scope.billNames;
-    // };
-
-    
-   //  $scope.getBillNames=function(id){
-   //     govTrackAPIservice.getBillName(id).success(function(response){
-   //        $scope.billNames=response;
-   //     };
-   // };
-    //   angular.foreach($scope.votedBills,function(value,key){
-    //     // govTrackAPIservice.getBillName(obj.option.id).success(function(response){
-    //     //   this.push(response.title);
-
-    //     // });
-    //     console.log(value);
-    // });
 
   });
