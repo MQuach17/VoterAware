@@ -28,6 +28,8 @@ body, html{
 #logo{
 	margin: auto auto;
 	display:block;
+	height: 15em;
+	padding: 2em 0em 2em 0em;
 		/*padding:10em 13em 0em 13em;*/
 
 }

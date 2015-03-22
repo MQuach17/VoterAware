@@ -27,7 +27,10 @@ angular.module('VAapp.controllers', []).
         $scope.votedBills=response.objects;
         angular.forEach($scope.votedBills,function(vb){
           govTrackAPIservice.getBillName(vb.option.id).success(function(response){
-            $scope.billNames.push(response.title);
+            $scope.billNames.push({
+                "id":response.id,
+                "title":response.title
+              });
           });
         });
 
