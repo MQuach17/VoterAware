@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
 <html data-ng-app="VAapp" >
 
 <head>
 	<title>VoterAware</title>
-	<!-- // <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+	<script type="text/javascript" src="bootstrap/js/boostrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-	<script type="text/javascript" src="bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
 	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
@@ -39,7 +41,9 @@
 </script>
 </head>
 <body data-ng-controller="VAcontroller" >
-	<div class="header">
+<div class="container-fluid">
+	
+	<div class="header row">
 	<!-- 	<div>
 			<img src="css/Voter Aware.png" id="logo">
 			<ul class="nav nav-justified">
@@ -49,44 +53,47 @@
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</div> -->
-<nav class="navbar navbar-default navbar-left">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img alt="VoterAware" src="css/Voter Aware.png" id="logo">
-      </a>
-      <!-- <img src="css/Voter Aware.png" id="logo"> -->
-      <!-- <a class="navbar-brand" href="#">Brand</a> -->
-    </div>
+		<nav class="navbar navbar-default navbar-left  col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+		<!--   <div class="container-fluid">
+		 -->    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse .navbar-collapse">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">
+		        <img alt="VoterAware" src="css/Voter Aware.png" id="logo">
+		      </a>
+		      <!-- <img src="css/Voter Aware.png" id="logo"> -->
+		      <!-- <a class="navbar-brand" href="#">Brand</a> -->
+		    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse">
-      <ul class="nav nav-justified mynav">
-<!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li> -->
-		<li class="active"><a href="#splash">Home<span class="sr-only">(current)</span></a></li>
-		<li><a href="#congress">Report Cards</a></li>
-		<li><a href="#about">About Us</a></li>
-		<li><a href="#contact">Contact</a></li>
-        
-      </ul>
-      
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse">
+		      <ul class="nav nav-justified mynav">
+		<!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#">Link</a></li> -->
+				<li class="active"><a href="#splash">Home<span class="sr-only">(current)</span></a></li>
+				<li><a href="#congress">Report Cards</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#contact">Contact</a></li>
+		        
+		      </ul>
+		      
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
+		    </div><!-- /.navbar-collapse -->
+		  <!-- </div>/.navbar-header -->
+		</nav>
 	</div>
+</div>
+
+	<!-- </div> -->
 	
-		<div ng-view class="main" class="container-fluid"></div>
-	
+		<div ng-view class="main continer-fluid" class=""></div>
+</div>
+
 <!-- https://www.govtrack.us/api/v2/vote_voter?person=400034 -->
 </body>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>

@@ -11,15 +11,16 @@ th{
 	text-align: center;
 }
 #content{
-	padding: 3em 3em 3em 3em;
-	background-color: white;
-	border:none;
-	box-shadow: 0px 0px 1em 1px gray;
+	/*padding: 3em 3em 3em 3em;*/
+	/*background-color: white;*/
+	/*border:none;*/
+	box-shadow: 0px 10px 1em 0px gray!important;
+
 
 
 }
 .main{
-	padding:0em 13em 0em 13em;
+	/*padding:0em 13em 0em 13em;*/
 	/*width: 75%;*/
 	/*background-color: #A88AA6;*/
 }
@@ -56,7 +57,7 @@ html{
 	background:url('../site BG 20op.png');
 	height: 100%!important;
 	width: 100%!important;
-	background-size: 90% 90%;
+	/*background-size: 90% 90%;*/
 
 }
 .nav li{
@@ -84,11 +85,11 @@ h2{
 	margin: 0em;
 }
 .header{
-		padding:0em 12em 0em 12em;
+		/*padding:0em 12em 0em 12em;*/
 		/*background-color: #A88AA6;*/
 }
 .header div{
-	background-color: white;
+	/*background-color: white;*/
 }
 footer{
 			padding:0em 13em 0em 13em;
@@ -106,7 +107,7 @@ li a{
 	font-family: serif;
 }
 .well{
-	background-color:transparent!important;
+	background-color:white!important;
 	box-shadow: none!important;
 	background-image: none!important;
 	border:none!important;
@@ -123,12 +124,22 @@ li a{
   padding: 10px;
   pointer-events: none;
 }
-form,input{
+.graySearch{
 	border-radius: 0!important;
 	background-color: #F4F4F4!important;
 	border:none!important;
 	box-shadow: none!important;
 	border-color: #F4F4F4!important;
+}
+/*form,input{
+	border-radius: 0!important;
+	background-color: #F4F4F4!important;
+	border:none!important;
+	box-shadow: none!important;
+	border-color: #F4F4F4!important;
+}
+*/.noColor .form-control{
+	background-color: none!important;
 }
 
 /* align icon */
@@ -138,3 +149,9 @@ form,input{
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
+/*.row-fluid {
+    word-wrap: break-word;  
+}*/
+.container-fluid{
+	padding: 0!important;
+}
