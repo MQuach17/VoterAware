@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html data-ng-app="VAapp" >
+
 <head>
-	<title>Vote Aware</title>
+	<title>VoterAware</title>
 	<!-- // <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	<script type="text/javascript" src="bootstrap.js"></script>
-<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="favicons/manifest.json">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#b24ab8">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,24 +38,54 @@
 
 </script>
 </head>
-<body data-ng-controller="VAcontroller">
+<body data-ng-controller="VAcontroller" >
 	<div class="header">
-		<div>
+	<!-- 	<div>
 			<img src="css/Voter Aware.png" id="logo">
-			<!-- <h2>VoterAware</h2> -->
-			<hr></hr>
-			</br>
 			<ul class="nav nav-justified">
 				<li><a href="#splash">Home</a></li>
 				<li><a href="#congress">Report Cards</a></li>
 				<li><a href="#about">About Us</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
-		</div>
+		</div> -->
+<nav class="navbar navbar-default navbar-left">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img alt="VoterAware" src="css/Voter Aware.png" id="logo">
+      </a>
+      <!-- <img src="css/Voter Aware.png" id="logo"> -->
+      <!-- <a class="navbar-brand" href="#">Brand</a> -->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav nav-justified mynav">
+<!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li> -->
+		<li class="active"><a href="#splash">Home<span class="sr-only">(current)</span></a></li>
+		<li><a href="#congress">Report Cards</a></li>
+		<li><a href="#about">About Us</a></li>
+		<li><a href="#contact">Contact</a></li>
+        
+      </ul>
+      
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 	</div>
 	
-		<div ng-view class="main"></div>
+		<div ng-view class="main" class="container-fluid"></div>
 	
 <!-- https://www.govtrack.us/api/v2/vote_voter?person=400034 -->
 </body>
