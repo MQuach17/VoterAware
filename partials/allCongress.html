@@ -26,7 +26,7 @@
 				</div>
 		</div>
 		<table class="table">
-			<tr data-ng-repeat="x in currentCongress|filter:search">
+			<tr data-ng-repeat="x in allCache|filter:search">
 				<td><img src="https://www.govtrack.us/data/photos/{{x.person.id}}-100px.jpeg"></td>
 				<td><a href="#/congress/{{x.person.id}}">{{x.person.name}}</a></td>
 				<!-- <td>{{x.state}}</td> -->

@@ -32,4 +32,9 @@ angular.module('VAapp.services', []).
     }
 
     return govTrackAPI;
+  }).
+
+  factory("allCongressCache",function($cacheFactory){
+      return $cacheFactory("congressCache")
+
   });

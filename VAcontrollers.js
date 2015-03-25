@@ -1,6 +1,6 @@
 angular.module('VAapp.controllers', []).
   controller('VAcontroller',
-    function($scope,$http,govTrackAPIservice) {
+    function($scope,$http,$log,govTrackAPIservice,allCongressCache) {
       $scope.states=['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS'
 ,'KY','LA','ME','MD','MA','MI','MN','MS', 'MO','MT','NE','NV','NH','NJ', 'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY' ];
       $scope.currentCongress={};
@@ -8,9 +8,23 @@ angular.module('VAapp.controllers', []).
         $scope.search={};
       };
 
-      govTrackAPIservice.getCongress().success(function(response){
-        $scope.currentCongress= response.objects;
-    });
+      $scope.allCache={};
+
+
+      var cache = allCongressCache.get('congressCache');
+      if (cache) {
+        $scope.allCache=cache;
+        $log.log('cached');
+      }
+      else{
+          govTrackAPIservice.getCongress().success(function(response){
+            // $scope.currentCongress= response.objects;
+            allCongressCache.put('congressCache',response.objects);
+            $scope.allCache=allCongressCache.get('congressCache');
+          });
+          $log.log("not cached");
+      }
+
   }).
 
   controller('detailController',function($scope,$routeParams,govTrackAPIservice){
