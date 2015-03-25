@@ -66,6 +66,9 @@ html{
 	white-space: nowrap;
 }
 
+.in{
+	margin-top: 1.5em;
+}
 
 body{
 	background-color:transparent!important;
