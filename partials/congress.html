@@ -1,36 +1,42 @@
-<!-- {{congressDetails}} -->
-<img src="https://www.govtrack.us/data/photos/{{congressDetails.id}}-100px.jpeg">
-<!-- {{billNames.title}} -->
-	<h2 style="color:red">Sorry for our appearence, currently in development!</h2>
+<div class="row">
+	<div  id="content"class="well col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
 
-<table>
-	<tr><th>Bill ID</th><th>Bill Name</th><th>vote.vote_type</th><th>Vote</th></tr>
-	<tr data-ng-repeat="x in votedBills" class="stripped">
-		<td >
-			<!-- {{x.option.vote}} -->
-			{{billNames[$index].id}}
+		<h2 style="color:red">Sorry for our appearence, currently in development!</h2>
+		<img src="https://www.govtrack.us/data/photos/{{congressDetails.id}}-100px.jpeg">
+		<h4>{{congressDetails.name}}</h4>
+		<h3>{{congressDetails.roles[1].state}}</h3>
 
-		</td>
-		<!-- <td>
-			{{x.option.vote}}
-		</td> -->
-		<td>
-			{{billNames[$index].question}}
+		<table>
+			<tr><th>Bill ID</th><th>Bill Name</th><th>vote.vote_type</th><th>Vote</th></tr>
+			<tr data-ng-repeat="x in votedBills" class="stripped">
+				<td >
+					<!-- {{x.option.vote}} -->
+					{{billNames[$index].id}}
 
-		</td>
-		<td>
-			{{x.vote.vote_type}}
-		</td>
-		<td>
-			<!-- {{x.option.value}} -->
-			{{billNames[$index].value}}
-		</td>
-<!-- 		<td>
-			{{x.vote.category_label}}
-		</td> -->
+				</td>
+				<!-- <td>
+					{{x.option.vote}}
+				</td> -->
+				<td>
+					{{billNames[$index].question}}
 
-	</tr>
-</table>
+				</td>
+				<td>
+					{{x.vote.vote_type}}
+				</td>
+				<td>
+					<!-- {{x.option.value}} -->
+					{{billNames[$index].value}}
+				</td>
+		<!-- 		<td>
+					{{x.vote.category_label}}
+				</td> -->
+
+			</tr>
+		</table>
+	</div>
+</div>
+
 
 <!-- <table>
 	<tr data-ng-repeat="x in billNames">
