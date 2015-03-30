@@ -1,32 +1,35 @@
 <div  class="row">	
 	<div id="content"class="well col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
 		
-
-		<div class="inner-addon left-addon ">
-
-			    <i class="glyphicon glyphicon-search"></i>
-				<input type="text" class="form-control graySearch" placeholder="Search..." data-ng-model="search"/>
+	<h2 style="color:red">Sorry for our appearence, currently in development!</h2>
+	<div class="inner-addon left-addon">
+			<form name="searchForm">
+			 <i class="glyphicon glyphicon-search"></i>
+				<input type="text" class="form-control graySearch" placeholder="Search..." data-ng-model="search.$" require min="1"/>
 			    <a href="" data-ng-click="adv=1" data-ng-show="!adv">Advanced Search</a>
+
 			    <div data-ng-show="adv">	  
-			     </br>  
-			      State: <select data-ng-model="search.state">
-			      			<option data-ng-repeat="x in states">{{x}}</option>
-			    		  </select>
-			      </br>
+				     </br>  
+				      State: <select data-ng-model="search.state">
+				      			<option data-ng-repeat="x in states">{{x}}</option>
+				    		  </select>
+				      </br>
 
-			      Party: 
-			      	<input type="radio" value="Democrat" data-ng-model="search.party" name="party"> Democrat</input>
+				      Party: 
+				      	<input type="radio" value="Democrat" data-ng-model="search.party" name="party"> Democrat</input>
 
-			      	<input type="radio" value="Republican"data-ng-model="search.party" name="party"> Republican</input>
-			      </br>
-			      <button data-ng-click="clear()">Clear</button>
-			      </br>
-			      </br>
-			  	  <a href="" data-ng-click="adv=0">Less</a>
+				      	<input type="radio" value="Republican"data-ng-model="search.party" name="party"> Republican</input>
+				      </br>
+				      <button data-ng-click="clear()">Clear</button>
+				      </br>
+				      </br>
+				  	  <a href="" data-ng-click="adv=0">Less</a>
 				</div>
+			</form>	
 		</div>
-		<table class="table">
-			<tr data-ng-repeat="x in allCache|filter:search">
+
+		<table class="table" ng-if="showTable()" ng-hide="searchForm.$pristine">
+			<tr data-ng-repeat="x in allCache|filter:search" >
 				<td><img src="https://www.govtrack.us/data/photos/{{x.person.id}}-100px.jpeg"></td>
 				<td><a href="#/congress/{{x.person.id}}">{{x.person.name}}</a></td>
 				<!-- <td>{{x.state}}</td> -->
