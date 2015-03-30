@@ -40,10 +40,11 @@ angular.module('VAapp.controllers', []).
     govTrackAPIservice.getCongressmenVotes($scope.id).success(function(response){
         $scope.votedBills=response.objects;
         angular.forEach($scope.votedBills,function(vb){
-          govTrackAPIservice.getBillName(vb.option.id).success(function(response){
+          govTrackAPIservice.getBillName(vb.option.vote).success(function(response){
             $scope.billNames.push({
                 "id":response.id,
-                "title":response.title
+                "question":response.question,
+                "value":vb.option.value
               });
           });
         });

@@ -5,17 +5,23 @@
 	<tr><th>Bill ID</th><th>Bill Name</th><th>vote.vote_type</th><th>Vote</th></tr>
 	<tr data-ng-repeat="x in votedBills" class="stripped">
 		<td >
-			{{x.option.id}}
+			<!-- {{x.option.vote}} -->
+			{{billNames[$index].id}}
+
 		</td>
+		<!-- <td>
+			{{x.option.vote}}
+		</td> -->
 		<td>
-			{{billNames[$index].title}}
+			{{billNames[$index].question}}
 
 		</td>
 		<td>
 			{{x.vote.vote_type}}
 		</td>
 		<td>
-			{{x.option.value}}
+			<!-- {{x.option.value}} -->
+			{{billNames[$index].value}}
 		</td>
 <!-- 		<td>
 			{{x.vote.category_label}}

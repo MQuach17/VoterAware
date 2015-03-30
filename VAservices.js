@@ -20,14 +20,14 @@ angular.module('VAapp.services', []).
     govTrackAPI.getCongressmenVotes = function(id){
       return $http({
         method: 'GET', 
-        url: 'https://www.govtrack.us/api/v2/vote_voter?person='+ id+'&format=json'
+        url: 'https://www.govtrack.us/api/v2/vote_voter?person='+ id+'&format=json&limit=6000&order_by=-created'
       });
     }
 
     govTrackAPI.getBillName = function(id){
       return $http({
         method: 'GET', 
-        url: 'https://www.govtrack.us/api/v2/bill/'+ id+'&format=json'
+        url: 'https://www.govtrack.us/api/v2/vote/'+ id
       });
     }
 
