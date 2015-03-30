@@ -4,8 +4,22 @@ angular.module('VAapp.controllers', []).
       $scope.states=['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS'
 ,'KY','LA','ME','MD','MA','MI','MN','MS', 'MO','MT','NE','NV','NH','NJ', 'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY' ];
       $scope.currentCongress={};
+      $scope.search={};
+      $scope.showTable=function(){
+        // debug
+        // $log.log(Object.keys($scope.search).length);
+        // $log.log("$.length"+$scope.search.$.length);
+
+        if (Object.keys($scope.search).length==1&&$scope.search.$.length==0) {
+          return 0;
+        }
+        return Object.keys($scope.search).length;
+      }
       $scope.clear=function(){
+        $scope.search=null;
+
         $scope.search={};
+        // $log.log("cleared");
       };
 
       $scope.allCache={};
