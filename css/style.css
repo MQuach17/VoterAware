@@ -29,7 +29,13 @@ th{
 .mynav{
 	padding-top: 2em;
 }
-nav a{
+ul li{
+	padding-top: 3em!important;
+
+}
+.navbar-brand{
+	height: 57px!important;
+
 
 }
 nav.navbar.navbar-default{
