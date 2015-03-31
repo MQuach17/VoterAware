@@ -1,3 +1,10 @@
+@font-face {
+    font-family: GothaBla;
+    src: url(../fonts/GothaHTFBol);
+}
+html, body{
+	/*font-family: GothaBla!important;*/
+}
 table, tr, td{
 	border-style: solid;
 	border-width: 1px;
