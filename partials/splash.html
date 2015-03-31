@@ -4,7 +4,7 @@
 		<div class="inner-addon left-addon">
 			<form name="searchForm">
 			 <i class="glyphicon glyphicon-search"></i>
-				<input type="text" class="form-control graySearch" placeholder="Search..." data-ng-model="search.$" require min="1"/>
+				<input type="text" class="form-control graySearch" placeholder="Search..." data-ng-model="search.$"/>
 			    <a href="" data-ng-click="adv=1" data-ng-show="!adv">Advanced Search</a>
 
 			    <div data-ng-show="adv">	  
@@ -19,12 +19,15 @@
 
 				      	<input type="radio" value="Republican"data-ng-model="search.party" name="party"> Republican</input>
 				      </br>
-				      <button data-ng-click="clear()">Clear</button>
 				      </br>
 				      </br>
 				  	  <a href="" data-ng-click="adv=0">Less</a>
 				</div>
+				<button id="clearBtn" data-ng-click="clear()" type="button" class="btn btn-default">Clear</button>
+
+				</br>
 			</form>	
+
 		</div>
 
 		<table class="table" ng-if="showTable()" ng-hide="searchForm.$pristine">
