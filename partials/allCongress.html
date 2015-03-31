@@ -28,6 +28,8 @@
 			</form>	
 		</div>
 
+		<!-- <h3>{{search}}</h3> -->
+
 		<table class="table" ng-if="showTable()" ng-hide="searchForm.$pristine">
 			<tr data-ng-repeat="x in allCache|filter:search" >
 				<td><img src="https://www.govtrack.us/data/photos/{{x.person.id}}-100px.jpeg"></td>

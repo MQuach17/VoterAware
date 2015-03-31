@@ -23,6 +23,10 @@ app.config(['$routeProvider',
 				templateUrl: "partials/contact.html", 
 				controller: "detailController"
 			}).
+		when("/demo",{
+				templateUrl: "partials/demoReportCards.html", 
+				controller: "detailController"
+			}).		
 		otherwise({
 			templateUrl: 'partials/splash.html'
 			// controller:"VAcontroller"

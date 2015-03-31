@@ -166,3 +166,18 @@ li a{
 {
   overflow: visible;
 }
+
+#medImg{
+	width: 160px;
+	height: 192px;
+	/*margin: 1em 0em 0em 3em;*/
+	float: left;
+	margin: auto auto;
+}
+.grayWell{
+	border-radius: 0!important;
+	background-color: #F4F4F4!important;
+	border:none!important;
+	box-shadow: none!important;
+	border-color: #F4F4F4!important;
+}

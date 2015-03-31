@@ -10,16 +10,15 @@ angular.module('VAapp.controllers', []).
         // $log.log(Object.keys($scope.search).length);
         // $log.log("$.length"+$scope.search.$.length);
 
-        if (Object.keys($scope.search).length==1&&$scope.search.$.length==0) {
-          return 0;
+        if (Object.keys($scope.search).length==1) {
+          return 1;
         }
         return Object.keys($scope.search).length;
       }
       $scope.clear=function(){
-        $scope.search=null;
 
         $scope.search={};
-        // $log.log("cleared");
+        $log.log("cleared");
       };
 
       $scope.allCache={};
