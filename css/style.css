@@ -22,8 +22,13 @@ th{
 	/*background-color: white;*/
 	/*border:none;*/
 	box-shadow: 0px 10px 1em 0px gray!important;
+}
 
-
+#staticContent{
+	box-shadow: 0px 10px 1em 0px gray!important;
+	height: 40em;
+	position: static;
+	overflow-y:scroll; 
 
 }
 .main{
@@ -198,4 +203,17 @@ li a{
 	float: right;
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+.grayBox{
+	background-color: gray;
+}
+.fixed{
+	position: fixed;
+}
+.fixed img, .fixed h4{
+	position: relative;
+}
+.fixed h4{
+	margin: auto auto;
+	padding-top: 12em;
 }
