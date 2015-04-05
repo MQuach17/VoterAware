@@ -217,3 +217,30 @@ li a{
 	margin: auto auto;
 	padding-top: 12em;
 }
+
+/*bubble divs from http://www.ilikepixels.co.uk/drop/bubbler/*/
+.bubble 
+{
+position: relative;
+width: 250px;
+height: 120px;
+padding: 0px;
+background: #B34FFF;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 0 15px 15px;
+border-color: transparent #B34FFF;
+display: block;
+width: 0;
+z-index: 1;
+right: -15px;
+top: 45px;
+}
