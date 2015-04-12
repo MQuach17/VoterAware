@@ -1,16 +1,25 @@
 @font-face {
-    font-family: GothaBla;
-    src: url(../fonts/GothaHTFBol);
+    font-family: GothamNarrowLight;
+    src: url(../fonts/Gotham/Gotham%20Narrow/GothamNarrow-Book.otf);
 }
-html, body{
-	/*font-family: GothaBla!important;*/
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/Gotham/GothamBold.otf);
+}
+html, body,*{
+	font-family: GothamNarrowLight!important;
+	font-weight: 100!important;
+	letter-spacing: 1px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: Gotham!important;
+
 }
 table, tr, td{
 	border-style: solid;
 	border-width: 1px;
 }
-.stripped:nth-child(odd){
-	background-color: gray;
+.stripped:nth-child(odd){`
 }
 th{
 	font-style: 1.5em;
@@ -74,10 +83,12 @@ html{
 	background-repeat: repeat;
 	background:url('../site BG 20op.png');*/
 	/*height: 100%!important;*/
-	background:url('../site BG 20op.png');
+	/*background:url('../site BG 20op.png');*/
+	background:url('../resources/VA-BG.png')!important;
 	height: 100%!important;
 	width: 100%!important;
-	/*background-size: 90% 90%;*/
+	background-size: 100em 90em;
+
 
 }
 .nav li{
@@ -104,7 +115,7 @@ body{
 
 }
 h2{
-	text-align: center;
+	text-align: left;
 	margin: 0em;
 }
 .header{
@@ -136,7 +147,10 @@ li a{
 	box-shadow: none!important;
 	background-image: none!important;
 	border:none!important;
-	border-radius: 0px!important;
+	border-radius: 1px!important;
+	padding: 4em!important;
+
+
 }
 /* enable absolute positioning */
 .inner-addon { 
@@ -207,13 +221,30 @@ li a{
 .grayBox{
 	background-color: gray;
 }
-.fixed{
-	position: fixed;
+.abs{
+	position: absolute!important;
 }
-.fixed img, .fixed h4{
+@media screen and (max-width: 989px){
+	.abs{
+		position: relative!important;
+	}
+
+}
+@media screen and (min-width: 767px){
+	.medImg{
+		position: absolute!important;
+		margin: 0em 0em 0em 39%;
+
+	}
+	.abs h4{
+		padding-top: 0;
+	}	
+}
+
+.abs img, .abs h4{
 	position: relative;
 }
-.fixed h4{
+.abs h4{
 	margin: auto auto;
 	padding-top: 12em;
 }
@@ -244,3 +275,18 @@ z-index: 1;
 right: -15px;
 top: 45px;
 }
+.clearfix{
+	clear: both;
+}
+.uk-progress-bar{
+	background-color: #632D91!important;
+	border-radius: 1em;
+}
+.uk-progress.uk-progress-striped{
+	background-color: #A0A0A0;
+	border-radius: 1em;
+}
+.glyphicon{
+	 font-family:'Glyphicons Halflings'!important;
+}
+
