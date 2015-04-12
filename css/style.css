@@ -6,6 +6,10 @@
     font-family: Gotham;
     src: url(../fonts/Gotham/GothamBold.otf);
 }
+@font-face {
+    font-family: GothamItalic;
+    src: url(../fonts/Gotham/Gotham-ThinItalic.otf);
+}
 html, body,*{
 	font-family: GothamNarrowLight!important;
 	font-weight: 100!important;
@@ -93,6 +97,9 @@ html{
 }
 .nav li{
 	white-space: nowrap;
+}
+.nav li a:hover{
+	background-color: transparent!important;
 }
 
 .in{
@@ -250,30 +257,62 @@ li a{
 }
 
 /*bubble divs from http://www.ilikepixels.co.uk/drop/bubbler/*/
-.bubble 
+.bubble-left 
 {
 position: relative;
-width: 250px;
-height: 120px;
+width: 50px;
+height: 35px;
 padding: 0px;
-background: #B34FFF;
--webkit-border-radius: 0px;
--moz-border-radius: 0px;
-border-radius: 0px;
+background: #646464;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+  text-align: center!important;
+  padding: .66em;
+  color: white;
 }
 
-.bubble:after 
+.bubble-left:after 
 {
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 15px 0 15px 15px;
-border-color: transparent #B34FFF;
+border-width: 8px 0 8px 8px;
+border-color: transparent #646464;
 display: block;
 width: 0;
 z-index: 1;
-right: -15px;
-top: 45px;
+right: -8px;
+top: 9px;
+
+}
+.bubble-right
+{
+position: relative;
+width: 50px;
+height: 35px;
+padding: 0px;
+background: #646464;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+  text-align: center!important;
+  padding: .66em;
+  color: white;
+}
+
+.bubble-right:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 8px 8px 0;
+border-color: transparent #646464;
+display: block;
+width: 0;
+z-index: 1;
+left: -8px;
+top: 9px;
 }
 .clearfix{
 	clear: both;
@@ -288,5 +327,20 @@ top: 45px;
 }
 .glyphicon{
 	 font-family:'Glyphicons Halflings'!important;
+}
+input.form-control.graySearch.ng-pristine.ng-untouched.ng-valid{
+	font-family: GothamItalic!important;
+	border-radius: 1px!important;
+}
+.grayWell .container{
+	width: inherit!important;
+
+}
+.grayWell .container .row *{
+	/*padding: 0!important;*/
+	/*float: left!important;*/
+}
+.col-lg-10{
+	padding: .5em 0 0 3em!important;
 }
 
